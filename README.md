@@ -1,2 +1,10 @@
 # Demo_Code
-A code collection for BOS
+BOS 代码示例
+用于示例库中代码下载，
+
+下载代码为HTML格式，可直接使用浏览器打开。
+
+
+
+
+
