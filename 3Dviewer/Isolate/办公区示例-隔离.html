@@ -1,0 +1,50 @@
+<!-- 当前文档用于实现办公区示例-隔离效果-->
+<!DOCTYPE html> 
+ <html> 
+     <head> 
+         <title>办公区示例-隔离</title> 
+         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+         <link rel="stylesheet" href="http://www.boswinner.com.cn/vizbim/BIMWINNER.viewer.min.css" /> 
+     </head> 
+     <body> 
+         <div id="viewport" style="width: 800px; height: 600px;"></div> 
+
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jquery.min.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/bootstrap-treeview.min.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/spectrum.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jquery-ui.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/three.min.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jszip.min.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/BIMWINNER.viewer.min.js"></script> 
+
+         <script type="text/javascript"> 
+             //配置文件KEY 
+             //获取文件KEY请前往“我的模型/个人中心-->我的模型”，http://www.boswinner.com.cn/mymodel 
+             var filekey = "demo_house_fornature"; 
+             var op = { 
+                 viewport:"viewport", //画布容器 
+                 //配置开发密钥 
+                 //获取开发密钥请前往“个人中心-->个人资料”，http://www.boswinner.com.cn/userpersonal 
+                 devcode:"e10e59bf0ee97213ca7104977877bd1a", 
+             }; 
+             //1.创建三维浏览器对象 
+             var vizbim = new BIMWINNER.Viewer(op); 
+             //2.添加工具条 
+             var tool = new BIMWINNER.Tool(vizbim); 
+             tool.createTool(); 
+             //3.加载模型 
+             vizbim.showModelByDocumentId(filekey,function(){
+                 //step1: 选取某一类构件进行操作，此处以‘IfcFurnishingElement’为例	
+                 //step2: 所选构件组，隔离显示           		 
+			     vizbim.isolationObjs(["demo_house_fornature_0wohQAnuf6ZgVno50xl6eZ", "demo_house_fornature_0wohQAnuf6ZgVno50xl6lL", "demo_house_fornature_09q$MxvMb1dwXrAsgHtB89", "demo_house_fornature_09XEv5f_DASg51HPICUih9", "demo_house_fornature_09XEv5f_DASg51HPICUZiz", "demo_house_fornature_09q$MxvMb1dwXrAsgHtBQ7", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfuAU", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfuAY", "demo_house_fornature_0wohQAnuf6ZgVno50xl61H", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfseV", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfonA", "demo_house_fornature_09q$MxvMb1dwXrAsgHtBOu", "demo_house_fornature_0wohQAnuf6ZgVno50xlo8R", "demo_house_fornature_09XEv5f_DASg51HPICUYTX", "demo_house_fornature_09XEv5f_DASg51HPICUYQV", "demo_house_fornature_0wohQAnuf6ZgVno50xl5cf", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfon6", "demo_house_fornature_3_mnlDRtj0AQzsFKgBftOX", "demo_house_fornature_3kOUOHA$j7NQKGQqtBGMSO", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfw3y", "demo_house_fornature_0wohQAnuf6ZgVno50xl61L", "demo_house_fornature_09q$MxvMb1dwXrAsgHtEk5", "demo_house_fornature_09XEv5f_DASg51HPICUiNs", "demo_house_fornature_0wohQAnuf6ZgVno50xlRBs", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfYhd", "demo_house_fornature_0wohQAnuf6ZgVno50xl61M", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfon7", "demo_house_fornature_0wohQAnuf6ZgVno50xl61G", "demo_house_fornature_09q$MxvMb1dwXrAsgHtABy", "demo_house_fornature_09q$MxvMb1dwXrAsgHtmnh", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfon4", "demo_house_fornature_0wohQAnuf6ZgVno50xl6nl", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfYBj", "demo_house_fornature_09XEv5f_DASg51HPICUiNn", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfonB", "demo_house_fornature_0d5TFv5zb57eouVJYW7eg8"]);
+                 //step3: 修改当前所选中构件组颜色
+                 //第一个参数为选中的构件组
+                 //第二个参数为构件组修改的颜色，依次为RGB对应的值，范围均为[0,1]	
+                vizbim.setObjtColor(["demo_house_fornature_0wohQAnuf6ZgVno50xl6eZ", "demo_house_fornature_0wohQAnuf6ZgVno50xl6lL", "demo_house_fornature_09q$MxvMb1dwXrAsgHtB89", "demo_house_fornature_09XEv5f_DASg51HPICUih9", "demo_house_fornature_09XEv5f_DASg51HPICUZiz", "demo_house_fornature_09q$MxvMb1dwXrAsgHtBQ7", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfuAU", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfuAY", "demo_house_fornature_0wohQAnuf6ZgVno50xl61H", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfseV", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfonA", "demo_house_fornature_09q$MxvMb1dwXrAsgHtBOu", "demo_house_fornature_0wohQAnuf6ZgVno50xlo8R", "demo_house_fornature_09XEv5f_DASg51HPICUYTX", "demo_house_fornature_09XEv5f_DASg51HPICUYQV", "demo_house_fornature_0wohQAnuf6ZgVno50xl5cf", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfon6", "demo_house_fornature_3_mnlDRtj0AQzsFKgBftOX", "demo_house_fornature_3kOUOHA$j7NQKGQqtBGMSO", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfw3y", "demo_house_fornature_0wohQAnuf6ZgVno50xl61L", "demo_house_fornature_09q$MxvMb1dwXrAsgHtEk5", "demo_house_fornature_09XEv5f_DASg51HPICUiNs", "demo_house_fornature_0wohQAnuf6ZgVno50xlRBs", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfYhd", "demo_house_fornature_0wohQAnuf6ZgVno50xl61M", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfon7", "demo_house_fornature_0wohQAnuf6ZgVno50xl61G", "demo_house_fornature_09q$MxvMb1dwXrAsgHtABy", "demo_house_fornature_09q$MxvMb1dwXrAsgHtmnh", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfon4", "demo_house_fornature_0wohQAnuf6ZgVno50xl6nl", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfYBj", "demo_house_fornature_09XEv5f_DASg51HPICUiNn", "demo_house_fornature_3_mnlDRtj0AQzsFKgBfonB", "demo_house_fornature_0d5TFv5zb57eouVJYW7eg8"],[0.5,0.7,0.9]);
+                 //查看具体接口信息，请前往API页：http://www.boswinner.com.cn/guide/swapi/files
+             }); 
+             //4.设置全屏显示 
+             vizbim.autoResize=true; 
+             vizbim.resize(); 
+         </script> 
+     </body> 

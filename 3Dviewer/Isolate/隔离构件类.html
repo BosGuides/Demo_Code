@@ -1,0 +1,46 @@
+<!-- 当前文档用于实现隔离构件类效果-->
+<!DOCTYPE html> 
+ <html> 
+     <head> 
+         <title>隔离构件类</title> 
+         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+         <link rel="stylesheet" href="http://www.boswinner.com.cn/vizbim/BIMWINNER.viewer.min.css" /> 
+     </head> 
+     <body> 
+         <div id="viewport" style="width: 800px; height: 600px;"></div> 
+
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jquery.min.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/bootstrap-treeview.min.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/spectrum.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jquery-ui.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/three.min.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jszip.min.js"></script> 
+         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/BIMWINNER.viewer.min.js"></script> 
+
+         <script type="text/javascript"> 
+             //配置文件KEY 
+             //获取文件KEY请前往“我的模型/个人中心-->我的模型”，http://www.boswinner.com.cn/mymodel 
+             var filekey = "demo_pipeline_simple"; 
+             var op = { 
+                 viewport:"viewport", //画布容器 
+                 //配置开发密钥 
+                 //获取开发密钥请前往“个人中心-->个人资料”，http://www.boswinner.com.cn/userpersonal 
+                 devcode:"e10e59bf0ee97213ca7104977877bd1a", 
+             }; 
+             //1.创建三维浏览器对象 
+             var vizbim = new BIMWINNER.Viewer(op); 
+             //2.添加工具条 
+             var tool = new BIMWINNER.Tool(vizbim); 
+             tool.createTool(); 
+             //3.加载模型 
+             vizbim.showModelByDocumentId(filekey,function(){
+                 //step1: 选取某一类构件进行操作，此处以‘IfcFlowSegment’为例	
+                 //step2: 所选构件组，隔离显示				 
+			     vizbim.isolationObjs(["demo_pipeline_simple_2zrmynzlz1zwa$8yMUYFzr", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYDDR", "demo_pipeline_simple_1MsuA5ITz2xuXdY0I7Ouaf", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNPP", "demo_pipeline_simple_34NcV6TFr2x9hzGbbSeqIF", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNHU", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNVD", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8E8h", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8E6U", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYFo2", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYFaD", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8Fnm", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8E5z", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNVg", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbu6z", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8EQY", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8EVg", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8E35", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYDzN", "demo_pipeline_simple_34NcV6TFr2x9hzGbbSen48", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbuBZ", "demo_pipeline_simple_0W$i8ROIL0bAil$b8K11Qp", "demo_pipeline_simple_3yIDT8idD1Bx_jkc0mGEJS", "demo_pipeline_simple_3eKUBOwaz1rQi0Re0ze5BB", "demo_pipeline_simple_3eKUBOwaz1rQi0Re0ze5np", "demo_pipeline_simple_1lhHjFwsrD2BWDV2HOvurS", "demo_pipeline_simple_1lhHjFwsrD2BWDV2HOvuwP", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8FiF", "demo_pipeline_simple_1f5g4Sykv9nuHmbZLkR49I", "demo_pipeline_simple_34NcV6TFr2x9hzGbbSeqLr", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYEj_", "demo_pipeline_simple_0W$i8ROIL0bAil$b8K11Qh", "demo_pipeline_simple_09OLcIiq1B3w0FVjsRtVe2", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNOm", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYDQH", "demo_pipeline_simple_1lhHjFwsrD2BWDV2HOvu2k", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYESN", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYDTb", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYEW6", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbu9w", "demo_pipeline_simple_1f5g4Sykv9nuHmbZLkR5qF", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYDj6", "demo_pipeline_simple_0W$i8ROIL0bAil$b8K11Vu", "demo_pipeline_simple_3eKUBOwaz1rQi0Re0ze54_", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNUv", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYFde", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8E3z", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYE15", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNOa", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNUl", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNHE", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNGx", "demo_pipeline_simple_3eKUBOwaz1rQi0Re0ze4Lp", "demo_pipeline_simple_34NcV6TFr2x9hzGbbSeqM$", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNPH", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYE7J", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYFvs", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbxyQ", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8F_q", "demo_pipeline_simple_3ONqb2XQ59uAvJbD2LvDr0", "demo_pipeline_simple_34NcV6TFr2x9hzGbbSeqSQ", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbu8$", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8Fco", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYFsc", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbu4n", "demo_pipeline_simple_0W$i8ROIL0bAil$b8K11Tn", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbxuS", "demo_pipeline_simple_34NcV6TFr2x9hzGbbSfCgs", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8Fn2", "demo_pipeline_simple_3yIDT8idD1Bx_jkc0mGEJB", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8Fnd", "demo_pipeline_simple_0W$i8ROIL0bAil$b8K11Ua", "demo_pipeline_simple_1f5g4Sykv9nuHmbZLkR5jl", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbxz4", "demo_pipeline_simple_1f5g4Sykv9nuHmbZLkR47f", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbu9q", "demo_pipeline_simple_1f5g4Sykv9nuHmbZLkR5aS", "demo_pipeline_simple_3eKUBOwaz1rQi0Re0ze5Tb", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8ESw", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbu4w", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbxqn", "demo_pipeline_simple_1L_m7xXTj1bOTmwQPrbu4k", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8Fe8", "demo_pipeline_simple_1f5g4Sykv9nuHmbZLkR5_r", "demo_pipeline_simple_3eKUBOwaz1rQi0Re0ze50D", "demo_pipeline_simple_34NcV6TFr2x9hzGbbSeqTf", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNQa", "demo_pipeline_simple_1f5g4Sykv9nuHmbZLkR59g", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8E5u", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8Fvh", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNG1", "demo_pipeline_simple_2zrmynzlz1zwa$8yMUYE$Y", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8FwK", "demo_pipeline_simple_34NcV6TFr2x9hzGbbSeqNL", "demo_pipeline_simple_10399NMAP1GhnnFAPsqNGR", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8Fvx", "demo_pipeline_simple_3eKUBOwaz1rQi0Re0ze5T9", "demo_pipeline_simple_3UQHaVAK1Cfw0mPGem8E2f", "demo_pipeline_simple_3eKUBOwaz1rQi0Re0ze4KL", "demo_pipeline_simple_3yIDT8idD1Bx_jkc0mGEJC"]);
+                 //查看具体接口信息，请前往API页：http://www.boswinner.com.cn/guide/swapi/files
+             }); 
+             //4.设置全屏显示 
+             vizbim.autoResize=true; 
+             vizbim.resize(); 
+         </script> 
+     </body> 
