@@ -35,40 +35,18 @@
              tool.createTool(); 
              //3.加载模型 
              vizbim.showModelByDocumentId(filekey,function(){ 
-                //定义获取构件组几何信息接口的地址
-                var url_step2 = "http://api.boswinner.com.cn/components/geometry?devcode=e10e59bf0ee97213ca7104977877bd1a";
-                //定义获取构件组几何信息的函数，作为获取某类构件中构件列表后的回调函数
-                var getGeo = function(url, componentList){
-                        $.ajax({
-                           method: 'POST',
-                           url: url_step2,
-                           contentType: "application/json",
-                           data: JSON.stringify(componentList)
-                        })
-                       .done(function(geodata){
-                           console.log(geodata);
-                       });
-                }
+                //选取模型中存在的某类构件type传入接口中
+                //此处以‘IfcFurnishingElement’为例
+                //返回值为所传构件类的全部基本信息
 
-                //选择一个当前模型含有的构件类型。
-                //以“IfcFurnishingElement”为例
-                //来获取对应的构件列表
-                //POST:
-                //models/{fileKey}/components?devcode='UserDevcode'
-                var url_step1="http://api.boswinner.com.cn/models/demo_fornature_cover/components?devcode=e10e59bf0ee97213ca7104977877bd1a";
-                var data_step1 = ["IfcFurnishingElement"];
+                var url = "http://api.boswinner.com.cn/models/demo_fornature_cover/geometries/IfcFurnishingElement?devcode=e10e59bf0ee97213ca7104977877bd1a";
                 $.ajax({
-                    type: 'POST',
-                    url: url_step1,
-                    contentType: "application/json",
-                    data: JSON.stringify(data_step1)
+                    type: 'GET',
+                    url: url
                     })
-                .done(function(componentList){
-                    //返回的信息将在console里显示出来
-                    console.log(componentList["data"]);
-                    //将生成的构件列表传入获取几何信息的接口中，以获取构件几何信息
-                    getGeo(url_step2,componentList["data"]);
-                });
+                .done(function(returnData){
+                    console.log(returnData);
+                    })
 
 
                 //为方便查看被提取数据的构件
@@ -80,7 +58,7 @@
                 //step2: 选取某一类构件进行操作，此处以‘IfcFurnishingElement’为例
                 var selectedType = objsTypeArray['IfcFurnishingElement'];
 
-                //step3: 隔离当前所选构件组
+                //step3: 高亮当前所选构件组
                 vizbim.highlightObjs(selectedType);
 
                 }); 
