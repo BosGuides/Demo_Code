@@ -8,3 +8,15 @@
 
 网站访问地址为：
   http://www.boswinner.com.cn/group/list
+
+
+
+文件与示例库模型对应关系如下：
+
+|          文件名称          |   对应示例   |
+| :--------------------: | :------: |
+|   ComponentWireFrame   |  构件线框化   |
+| TypeComponentWireFrame |  构件组线框化  |
+|     HouseWireFrame     | 住房类-线框化  |
+|    OfficeWireFrame     | 办公区类-线框化 |
+|    CompanyWireFrame    | 厂房类-线框化  |

@@ -8,3 +8,11 @@
 
 网站访问地址为：
   http://www.boswinner.com.cn/group/list
+
+
+
+文件与示例库模型对应关系如下：
+
+|        文件名称        |  对应示例   |
+| :----------------: | :-----: |
+| MassageNotation |  消息提示框   |

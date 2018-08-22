@@ -8,3 +8,18 @@
 
 网站访问地址为：
   http://www.boswinner.com.cn/group/list
+
+
+
+文件与示例库模型对应关系如下：
+
+|         文件名称         |  对应示例   |
+| :------------------: | :-----: |
+|  ComponentAdaptive   |  构件聚焦   |
+|     TypeAdaptive     |  构件类聚焦  |
+| AdaptiveAndHighlight | 聚焦并高亮构件 |
+|    HouseAdaptive     | 住房类-聚焦  |
+|    OfficeAdaptive    | 办公区类-聚焦 |
+|   CompanyAdaptive    | 厂房类-聚焦  |
+
+

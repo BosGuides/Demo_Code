@@ -10,3 +10,13 @@
   http://www.boswinner.com.cn/group/list
 
 
+
+文件与示例库模型对应关系如下：
+
+|        文件名称        |  对应示例   |
+| :----------------: | :-----: |
+| ComponentHighlight |  构件高亮   |
+|   TypeHighlight    |  构件类高亮  |
+|   HouseHighlight   | 住房类-高亮  |
+|  OfficeHighlight   | 办公区类-高亮 |
+|  CompanyHighlight  | 厂房类-高亮  |
