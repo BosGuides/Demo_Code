@@ -32,8 +32,8 @@ const addView = {
 var vizbim = new BIMWINNER.Viewer(op);
 
 function init(id){
-	var tool = new BIMWINNER.Tool(vizbim); 
-	tool.createTool(); 
+  var tool = new BIMWINNER.Tool(vizbim); 
+  tool.createTool(); 
   hideBarAndTool();
   getOutlineComponents(id).then(()=>{
     vizbim.showModelByDocumentId(id,function(){
@@ -43,9 +43,9 @@ function init(id){
       });
     });
   });
-	vizbim.autoResize=true; 
-	vizbim.resize(); 
-	showxsjTool2();
+  vizbim.autoResize=true; 
+  vizbim.resize(); 
+  showxsjTool2();
 }
 
 let mode1 = false;
@@ -64,13 +64,13 @@ const dollyComponent = (flag,level,compoennts) =>{
   var time = setInterval(function (a) {
     timeLength --;
     if(timeLength > 0){
-			if(flag === true){
-				for(var i = 0;i<compoennts.length;i++){
-					vizbim.components[compoennts[i]].position.x-=step;
-				}
-			}else {
-				for(var i = 0;i<compoennts.length;i++){
-					vizbim.components[compoennts[i]].position.x+=step;
+      if(flag === true){
+	for(var i = 0;i<compoennts.length;i++){
+	    vizbim.components[compoennts[i]].position.x-=step;
+		}
+       }else {
+        for(var i = 0;i<compoennts.length;i++){
+	vizbim.components[compoennts[i]].position.x+=step;
 				}
 			}
 		}
