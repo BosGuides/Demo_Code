@@ -7,7 +7,7 @@
 中每个示例的代码。
 
 网站访问地址为：
-  http://www.boswinner.com.cn/group/list
+  https://www.boswinner.com.cn/group/list
 
 
 文件与示例库模型对应关系如下：
