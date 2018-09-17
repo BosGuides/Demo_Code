@@ -1,29 +1,30 @@
-<!DOCTYPE html> 
- <html> 
- <title>建筑构件内外分离</title>
-     <head> 
+<!DOCTYPE html>
+<html>
+  <title>建筑构件内外分离</title>
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://www.boswinner.com.cn/vizbim/BIMWINNER.viewer.min.css" />
+    <link rel="stylesheet" href="./style.css" /></head>
+  <style>.goGit{ padding: 4px; font-size: 14px; z-index: 10000; position: fixed; right:30px; bottom: 30px; color: #333; cursor: pointer; background: #dddddd; border-radius: 4px; }</style>
+  
+  <body style="overflow: hidden">
+    <div id="viewport" style="width: 800px; height: 600px;"></div>
+    <div id="container" style="width: 800px; height: 600px;"></div>
+    <div class="goGit" onClick="goToGit()">下载完整代码</div>
+    <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/bootstrap-treeview.min.js"></script>
+    <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/spectrum.js"></script>
+    <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/three.min.js"></script>
+    <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jszip.min.js"></script>
+    <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/BIMWINNER.viewer.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript">init('17955755');
+      function goToGit() {
+        window.open("https://github.com/BosGuides/Demo_Code/tree/master/Key_Demo/Outer")
+      }</script>
+  </body>
 
-         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-         <link rel="stylesheet" href="http://www.boswinner.com.cn/vizbim/BIMWINNER.viewer.min.css" /> 
-         <link rel="stylesheet" href="./style.css" />
-     </head>
-     <body> 
-         <div id="viewport" style="width: 800px; height: 600px;"></div> 
-         <div id="container" style="width: 800px; height: 600px;"></div>
-
-         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jquery.min.js"></script> 
-         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/bootstrap-treeview.min.js"></script> 
-         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/spectrum.js"></script> 
-         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jquery-ui.js"></script> 
-         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/three.min.js"></script> 
-         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/jszip.min.js"></script> 
-         <script type="text/javascript" src="http://www.boswinner.com.cn/vizbim/BIMWINNER.viewer.min.js"></script>
-         <script type="text/javascript" src="index.js"></script>
-
-         <script type="text/javascript"> 
-         	//初始化模型key
-            init('17955755');
-         </script>
-     </body>
- </html>
+</html>
