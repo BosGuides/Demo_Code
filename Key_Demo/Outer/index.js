@@ -1,7 +1,7 @@
 var op = { 
  viewport:"viewport",
  //用户devcode
- devcode:"e10e59bf0ee97213ca7104977877bd1a",
+ devcode:"1aa6ed778a61ef60283f",
  baseaddress:'https://api.boswinner.com.cn/'
 };
 
@@ -14,16 +14,16 @@ let moreComponents31 = [];
 
 // 分离视角
 const splitView = {
-  eye: [-93467.12702094551,-127086.71202076464,118791.54282395728],
-  look:[-49753.444691370416, -24100.75553809902,19693.58201289969],
+  eye: [-84951.2964396081,560249.7254059268,63055.93255458929],
+  look:[10684.83279076726, 466652.50072562625,6449.802378514152],
   up: [0,0,1],
   zoom: 1
 }
 
 // 合并视角
 const addView = {
-  eye: [-54078.476250542735,-141483.23266062635, 122107.26976189908],
-  look: [-8833.91015625,-34701.17626953125,27831.5],
+  eye: [93644.37334045093,616504.737509469, 51793.34472889908],
+  look: [32603.541177980136,495442.36184862565,-445.3541810086033],
   up: [0,0,1],
   zoom: 1
 }
@@ -32,20 +32,26 @@ const addView = {
 var vizbim = new BIMWINNER.Viewer(op);
 
 function init(id){
-  var tool = new BIMWINNER.Tool(vizbim); 
-  tool.createTool(); 
+	var tool = new BIMWINNER.Tool(vizbim); 
+	tool.createTool(); 
   hideBarAndTool();
   getOutlineComponents(id).then(()=>{
     vizbim.showModelByDocumentId(id,function(){
       backToOrigin();
+      addTableMark();
+      //添加坐标系
+      // var axes = new THREE.AxisHelper(200000);
+      // vizbim.scene.add(axes);
+      vizbim.fly.flyTo(addView);
       vizbim.listentoSelectObjs(function (componentId, component) {
         console.log("componentId:",componentId);
+        // console.log("component",component);
       });
     });
   });
-  vizbim.autoResize=true; 
-  vizbim.resize(); 
-  showxsjTool2();
+	vizbim.autoResize=true; 
+	vizbim.resize(); 
+	showxsjTool2();
 }
 
 let mode1 = false;
@@ -64,13 +70,13 @@ const dollyComponent = (flag,level,compoennts) =>{
   var time = setInterval(function (a) {
     timeLength --;
     if(timeLength > 0){
-      if(flag === true){
-	for(var i = 0;i<compoennts.length;i++){
-	    vizbim.components[compoennts[i]].position.x-=step;
-		}
-       }else {
-        for(var i = 0;i<compoennts.length;i++){
-	vizbim.components[compoennts[i]].position.x+=step;
+			if(flag === true){
+				for(var i = 0;i<compoennts.length;i++){
+					vizbim.components[compoennts[i]].position.y-=step;
+				}
+			}else {
+				for(var i = 0;i<compoennts.length;i++){
+					vizbim.components[compoennts[i]].position.y+=step;
 				}
 			}
 		}
@@ -146,27 +152,51 @@ const backToOrigin = () =>{
 
 // 创建左侧按钮
 function showxsjTool2(){
-  	var toolBarZK=$("<div style='position:absolute;z-index:1;display:flex;flex-direction:column;left:10px;top:10px;margin-left:10px' id='toolBarZK2' ></div>");
+  	var toolBarZK=$("<div id='toolBarZK' style='position:absolute;z-index:1;display:flex;flex-direction:column;left:10px;top:10px;margin-left:10px' id='toolBarZK2' ></div>");
         toolBarZK.appendTo($("#container"));
   	$(toolBarZK).append("<p id ='title' style='font-size:30px;margin-bottom: 0'> " +
 			"模型外轮廓提取示例 " +
 			"<i style='font-size:20px;cursor:pointer;'class='far fa-question-circle' onmousedown='showDescription()' onmousemove=''></i>" +
-			"</p>")
-    $(container).append("<div id='descriptionContainer' style='display:none'> </div>")
-      $(descriptionContainer).append("<p id ='title1' style='font-size:16px;margin-bottom: 0'> " +
-        "对于不同精细度的模型，提供不同精细度的外轮廓提取 " + "</p>")
-    $(descriptionContainer).append("<p id ='title2' style='font-size:14px;margin-bottom: 0'> " +
-      "点击 一级轮廓 按钮，将显示初级精细度下的模型外轮廓 " + "</p>")
-    $(descriptionContainer).append("<p id ='title3' style='font-size:14px;margin-bottom: 0'> " +
-      "点击 二级轮廓 按钮，将显示中级精细度下的模型外轮廓 " + "</p>")
-    $(descriptionContainer).append("<p id ='title4' style='font-size:14px;margin-bottom: 0'> " +
-      "点击 三级轮廓 按钮，将显示高级精细度下的模型外轮廓 " + "</p>")
-      $(toolBarZK).append("<ul id='tbZKul2' style='list-style-type:none;padding:0;'></ul>");
+			"</p>");
+  $(container).append("<div id='descriptionContainer' style='display:none'> </div>")
+		$(descriptionContainer).append("<p id ='title1' style='font-size:16px;margin-bottom: 0'> " +
+			"对于不同精细度的模型，提供不同精细度的外轮廓提取 " + "</p>");
+  $(descriptionContainer).append("<p id ='title2' style='font-size:16px;margin-bottom: 0'> " +
+    "点击 一级轮廓 按钮，将显示初级精细度下的模型外轮廓 " + "</p>");
+  $(descriptionContainer).append("<p id ='title3' style='font-size:16px;margin-bottom: 0'> " +
+    "点击 二级轮廓 按钮，将显示中级精细度下的模型外轮廓 " + "</p>");
+  $(descriptionContainer).append("<p id ='title4' style='font-size:16px;margin-bottom: 0'> " +
+    "点击 三级轮廓 按钮，将显示高级精细度下的模型外轮廓 " + "</p>");
+		$(toolBarZK).append("<ul id='tbZKul2' style='list-style-type:none;padding:0;'></ul>");
 		$(tbZKul2).append("<li id = 'modelEdit1'><button disabled class='lyButton' id = 'button1' onclick='moveComponents(1);'>一级轮廓</button></li>");
 		$(tbZKul2).append("<li id = 'modelEdit2'><button disabled class='lyButton' id = 'button2' onclick='moveComponents(2);'>二级轮廓</button></li>");
 		$(tbZKul2).append("<li id = 'modelEdit3'><button disabled class='lyButton' id = 'button3' onclick='moveComponents(3);'>三级轮廓</button></li>");
 		$(tbZKul2).append("<li id = 'modelEdit4'><button disabled class='lyButton' id = 'button4' onclick='moveComponents(4);'>合并</button></li>");
+}
 
+const addTableMark = () =>{
+  $("#toolBarZK").append("<table width=\"230\" cellpadding='20' border=\"1\" style=\"border-collapse:collapse; border-color: #d9d9d9\">\n" +
+    "  <tr>\n" +
+    "    <th>构件数</th>\n" +
+    "    <th>提取比例</th>\n" +
+    "  </tr>\n" +
+    "  <tr>\n" +
+    "    <td>全模型:"+vizbim.alloids.length+"</td>\n" +
+    "    <td>"+"100%"+"</td>\n" +
+    "  </tr>\n" +
+    "  <tr>\n" +
+    "    <td>一级轮廓:"+ outComponents1.length +"</td>\n" +
+    "    <td>"+(100*outComponents1.length/vizbim.alloids.length).toFixed(2)+"%"+"</td>\n" +
+    "  </tr>\n" +
+    "  <tr>\n" +
+    "    <td>二级轮廓:"+ outComponents2.length +"</td>\n" +
+    "    <td>"+(100*outComponents2.length/vizbim.alloids.length).toFixed(2)+"%"+"</td>\n" +
+    "  </tr>\n" +
+    "  <tr>\n" +
+    "    <td>三级轮廓:"+ outComponents3.length +"</td>\n" +
+    "    <td>"+(100*outComponents3.length/vizbim.alloids.length).toFixed(2)+"%"+"</td>\n" +
+    "  </tr>\n" +
+    "</table >")
 }
 
 // 工具栏隐藏
@@ -192,26 +222,19 @@ Array.prototype.diff = function(a) {
   return this.filter(function(i) {return a.indexOf(i) < 0;});
 }
 
-let promptingMessage
 // 获取模型外轮廓
 const getOutlineComponents = (id) =>{
-  // promptingMessage =vizbim.promptingMessage("info", "正在获取一级轮廓构件", false);
   return getOutlineComponentByLevel(id,1)
     .then((result1)=> {
       outComponents1 = result1.data;
-      // promptingMessage.remove();
-      // promptingMessage =vizbim.promptingMessage("info", "正在获取二级轮廓构件", false);
       return getOutlineComponentByLevel(id,2)
     })
     .then((result2)=> {
       outComponents2 = result2.data;
-      // promptingMessage.remove();
-      // promptingMessage =vizbim.promptingMessage("info", "正在获取三级轮廓构件", false);
       return getOutlineComponentByLevel(id,3)
     })
     .then((result3)=> {
       outComponents3 = result3.data;
-      // promptingMessage.remove();
       moreComponents2 =outComponents2.diff(outComponents1)
       moreComponents3 =outComponents3.diff(outComponents1).diff(outComponents2)
       moreComponents31 =outComponents3.diff(outComponents1)
