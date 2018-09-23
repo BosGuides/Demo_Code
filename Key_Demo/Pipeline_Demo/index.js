@@ -1,7 +1,7 @@
 var op = { 
  viewport:"viewport",
  //用户devcode
- devcode:"e10e59bf0ee97213ca7104977877bd1a",
+ devcode:"e10e59bf0ee9721",
  baseaddress:'https://api.boswinner.com.cn/'
 };
 
