@@ -2,7 +2,7 @@ const op = {
  viewport:"viewport",
  //用户开发码
  devcode:"c65b2f5f8f854",
- baseaddress:'http://47.94.145.153:9090/',
+ baseaddress:'https://api.boswinner.com.cn/',
 };
 const vizbim = new BIMWINNER.Viewer(op);
 let ballMark = new THREE.Object3D();
