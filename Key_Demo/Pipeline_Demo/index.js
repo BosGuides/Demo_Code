@@ -1,7 +1,6 @@
 var op = { 
  viewport:"viewport",
- //用户devcode
- devcode:"e10e59bf0ee9721",
+ devcode:"e10e59bf0ee97213ca7104977877bd1a",
  baseaddress:'https://api.boswinner.com.cn/'
 };
 
@@ -85,12 +84,11 @@ function init(id){
     .then(()=>{
       vizbim.showModelByDocumentId(id,function(){
         let loader = new THREE.FontLoader();
-        loader.load( 'http://pf6zh7nc8.bkt.clouddn.com/helvetiker_regular.typeface.json', function ( font1 ) {
+        loader.load( 'https://www.boswinner.com.cn/vizbim/fonts/helvetiker_regular.typeface.json', function ( font1 ) {
           font= font1;
           vizbim.scene.add(textMark);
           addAllSystemText();
         });
-
         backToOrigin();
         changeSystemColor();
         vizbim.fly.flyTo(mainView);
@@ -105,7 +103,7 @@ function init(id){
         // var axes = new THREE.AxisHelper(200000);
         // vizbim.scene.add(axes);
         vizbim.listentoSelectObjs(function (componentId, component) {
-          console.log("componentId:",componentId);
+          // console.log("componentId:",componentId);
           // console.log("component",component);
         });
       });
@@ -166,6 +164,8 @@ const backToOrigin = () =>{
   $('#button5').removeAttr("disabled");
   $('#button6').removeAttr("disabled");
   $('#button7').removeAttr("disabled");
+  $('.lyButton').css("color","black");
+  $('.lyButton').css("cursor","pointer");
 }
 
 // 创建左侧按钮
@@ -173,7 +173,7 @@ function showxsjTool2(){
   	var toolBarZK=$("<div id='toolBarZK' style='position:absolute;z-index:1;display:flex;flex-direction:column;left:10px;top:10px;margin-left:10px' id='toolBarZK2' ></div>");
         toolBarZK.appendTo($("#container"));
   	$(toolBarZK).append("<p id ='title' style='font-size:30px;margin-bottom: 0'> " +
-			"管道系统模型 " +
+			"系统监管平台示例 " +
 			"<i style='font-size:20px;cursor:pointer;'class='far fa-question-circle' onmousedown='showDescription()' onmousemove=''></i>" +
 			"</p>");
   $(container).append("<div id='descriptionContainer' style='display:none'> </div>")
@@ -189,7 +189,7 @@ function showxsjTool2(){
     $(tbZKul2).append("<li id = 'modelEdit6'><button disabled class='lyButton' id = 'button7' onclick='seeTheBigPicture();'>一键观全局</button></li>");
 }
 
-
+// 一键观全局
 const seeTheBigPicture = () =>{
   vizbim.resetScene(true,true,true,true,false,true,true);
   addAllArrow();
@@ -201,12 +201,14 @@ const hideBarAndTool = () =>{
   // 左上角的视图球
   var leftUpDiv = document.getElementsByClassName('list-item2')[0];
   leftUpDiv.style.display = 'none';
+  const uuid = vizbim.uuid;
+  $("#modelTree"+uuid).css("display","none");
 }
 
 // 显示说明
 const showDescription = () =>{
 	if(!description){
-    $(descriptionContainer).attr("style","position:absolute; top:50px; left:240px; background-color:white")
+    $(descriptionContainer).attr("style","position:absolute; top:50px; left:300px; background-color:white")
   }else {
     $(descriptionContainer).attr("style","display:none;")
 	}
@@ -219,7 +221,7 @@ const getComponentBySystem = (id) =>{
     .then(response => response.json())
     .then(result=>{
       let systermComponents = JSON.parse(result.data);
-      console.log("getComponentBySystem的result:",systermComponents);
+      // console.log("getComponentBySystem的result:",systermComponents);
       systemComponents1 = systermComponents[0].systemgroup;
       systemComponents2 = systermComponents[1].systemgroup;
       systemComponents3 = systermComponents[2].systemgroup;
@@ -449,7 +451,7 @@ const createArrow =(tObj,x,y,z,flowDerection) =>{
   arrow.add(cube2);
   arrow.position.x += 400;
   arrow.position.z += 200;
-  console.log("创建arrow传递过来的x,y,z",x,y,z);
+  // console.log("创建arrow传递过来的x,y,z",x,y,z);
   arrow.position.set(x,y,z);
   tObj.add(arrow);
   // console.log("刚创建好箭头之后箭头的位置y:",arrow.position.y);
@@ -485,7 +487,7 @@ const multipurposeCreateArrow = (startPoint,endPoint,flowDerection,speed,obj3D) 
       animationY2 = y1-(number*2-1)*arrowLength    // 保证箭头动画前后间距一致
       newEndPoint = Object.assign({}, endPoint);
       newEndPoint.y = animationY2;
-      console.log("y-number",number);
+      // console.log("y-number",number);
       for (let i =0; i<number;i++){
         createArrow(obj3D,x1+400,y1-i*arrowLength*2,z1+100,flowDerection);
       }
@@ -697,6 +699,7 @@ const changHomeBehavior = () =>{
     vizbim.resetScene(true,true,true,true,false,true,true);
     vizbim.fly.flyTo(mainView);
     removeArrow();
+    changeSystemColor();
   });
 }
 
@@ -763,6 +766,7 @@ const updateTextView  = (tObj) =>{
   }
 }
 
+// 添加文字标签
 const addAllSystemText = () =>{
   addText("12.2 °C","18357808_09OLcIiq1B3w0FVjsRtVe2",textMark5);
   addText("7.2 °C","18357808_34NcV6TFr2x9hzGbbSfCgs",textMark5);
@@ -783,3 +787,4 @@ const addAllSystemText = () =>{
   addText("34 °C","18357808_3yIDT8idD1Bx_jkc0mGEJD",textMark4);
   addText("19 °C","18357808_10399NMAP1GhnnFAPsqNOx",textMark4);
 }
+
