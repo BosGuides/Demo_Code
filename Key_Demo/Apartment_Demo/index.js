@@ -1,66 +1,70 @@
 const op = {
  viewport:"viewport",
- //用户开发码
- devcode:"c65b2f5f8f854",
+ devcode:"e10e59bf0ee97213ca7104977877bd1a",
  baseaddress:'https://api.boswinner.com.cn/',
 };
 const vizbim = new BIMWINNER.Viewer(op);
-let ballMark = new THREE.Object3D();
-let textMark = new THREE.Object3D();
-let ballTextMark = new THREE.Object3D();
-let threeBallTextMark = new THREE.Object3D();
+const textMark = new THREE.Object3D();
+//三维字体父级
+const ballTextMark = new THREE.Object3D();
+//三维球父级
+const threeBallTextMark = new THREE.Object3D();
+// 模型主视角
 const mainView = {
   eye:[61315.67262933799,36822.58786974741,24853.612364662054],
   look:[4549.756218968891,-2611.13324081467,7805.0001220703125],
   up:[0,0,1],
   zoom:1
 }
+// 存二层三层四层构件
 let component2 = [];
 let component3 = [];
 let component4 = [];
 
 const allComponents = window.allComponents = {}
 
-function init(id){
-	let tool = new BIMWINNER.Tool(vizbim); 
-	tool.createTool();
+// 初始化，主函数
+function init(id) {
+  let tool = new BIMWINNER.Tool(vizbim);
+  tool.createTool({modelphoto:false});
   vizbim.scene.add(ballTextMark);
   vizbim.scene.add(threeBallTextMark);
   ballTextMark.add(textMark);
-  ballTextMark.add(ballMark);
   hideBarAndTool();
-  // 获取每一层构件I，初始化模型
-  getSpaceTreeComponents(id).then((result)=>{
-    const dataArray = result[0].childrenResultList[0].childrenResultList[0].childrenResultList;
-    allComponents.component2 = get234Compoennts(dataArray,"2F");
-    allComponents.component3 = get234Compoennts(dataArray,"3F");
-    allComponents.component4 = get234Compoennts(dataArray,"4F");
-    tree.forEach((item,index)=>{
-      if(index === 0){
-        item.componentId = allComponents.component2;
-      }else if(index === 1){
-        item.componentId = allComponents.component3;
-      }else if(index === 2){
-        item.componentId = allComponents.component4;
-      }
+  vizbim.autoResize = true;
+  vizbim.resize();
+  vizbim.showModelByDocumentId(id, function () {
+    //添加坐标系
+    // let axes = new THREE.AxisHelper(200000);
+    // vizbim.scene.add(axes);
+    // 视角飞跃
+    vizbim.fly.flyTo(mainView);
+    // 更改小房子点击事件
+    changHomeBehavior();
+    vizbim.listentoSelectObjs(function (componentId, component) {
+      // console.log("componentId:", componentId);
+      // console.log("component",component);
     });
-    initTree();
-    vizbim.showModelByDocumentId(id,function(){
-      //添加坐标系
-      // let axes = new THREE.AxisHelper(200000);
-      // vizbim.scene.add(axes);
-      // 视角飞跃
-      vizbim.fly.flyTo(mainView);
-      // 更改小房子点击事件
-      changHomeBehavior();
-      vizbim.listentoSelectObjs(function (componentId, component) {
-        // console.log("componentId:",componentId);
-        // console.log("component",component);
+
+    const promptingMessage1 = vizbim.promptingMessage("info", "楼层数据获取中，请稍等...", false);
+    getSpaceTreeComponents(id).then((result) => {
+      promptingMessage1.remove();
+      const dataArray = result[0].childrenResultList[0].childrenResultList[0].childrenResultList;
+      allComponents.component2 = get234Compoennts(dataArray, "2F");
+      allComponents.component3 = get234Compoennts(dataArray, "3F");
+      allComponents.component4 = get234Compoennts(dataArray, "4F");
+      tree.forEach((item, index) => {
+        if (index === 0) {
+          item.componentId = allComponents.component2;
+        } else if (index === 1) {
+          item.componentId = allComponents.component3;
+        } else if (index === 2) {
+          item.componentId = allComponents.component4;
+        }
       });
-    });
+      initTree();
+    })
   });
-	vizbim.autoResize=true;
-	vizbim.resize();
 }
 
 // 工具栏隐藏
@@ -71,9 +75,11 @@ const hideBarAndTool = () =>{
 }
 
 let mark
+let markFlag = false;
 
 // 添加标签
 const addMark = (componentId,title) =>{
+  markFlag = !markFlag;
   const level = title.substring(0,1);
   const cardBord=$(
     "<div class=\"layui-card\">\n" +
@@ -90,7 +96,6 @@ const addMark = (componentId,title) =>{
   mark = new BIMWINNER.DOMMark(vizbim);
   const tPosition = vizbim.components[componentId].position;
   const position = [tPosition.x,tPosition.y,tPosition.z]
-  // console.log("position:",position);
   mark.add({
     startPosition:position,
     offsetPosition: [100,-100],
@@ -100,7 +105,8 @@ const addMark = (componentId,title) =>{
     domElement:cardBord
   },
     function(a){
-    console.log(a)
+    // console.log(a)
+      $("#labelLinemarkid").css("background-color","black");
   });
 }
 
@@ -119,7 +125,7 @@ const tree = [
       {
         text: "201宿舍",
         info:'1',
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE2w4',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE2w4',
         guid:1,
         type:'switch',
       },
@@ -127,21 +133,21 @@ const tree = [
         text: "203宿舍",
         info:'2',
         guid:5,
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE2w6',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE2w6',
         type:'switch',
       },
       {
         text: "205宿舍",
         info:'3',
         guid:12,
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE2w0',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE2w0',
         type:'switch',
       },
       {
         text: "207宿舍",
         info:'4',
         guid:34,
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE2w2',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE2w2',
         type:'switch',
       }
     ]
@@ -160,7 +166,7 @@ const tree = [
       {
         text: "301宿舍",
         info:'1',
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE2ws',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE2ws',
         guid:1,
         type:'switch',
       },
@@ -168,21 +174,21 @@ const tree = [
         text: "304宿舍",
         info:'2',
         guid:5,
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE2wp',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE2wp',
         type:'switch',
       },
       {
         text: "305宿舍",
         info:'3',
         guid:12,
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE2wo',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE2wo',
         type:'switch',
       },
       {
         text: "308宿舍",
         info:'4',
         guid:34,
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE2w$',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE2w$',
         type:'switch',
       }
     ]
@@ -201,7 +207,7 @@ const tree = [
       {
         text: "401宿舍",
         info:'1',
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE37q',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE37q',
         guid:1,
         type:'switch',
       },
@@ -209,43 +215,46 @@ const tree = [
         text: "402宿舍",
         info:'2',
         guid:5,
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE37t',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE37t',
         type:'switch',
       },
       {
         text: "403宿舍",
         info:'3',
         guid:12,
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE37s',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE37s',
         type:'switch',
       },
       {
         text: "405宿舍",
         info:'4',
         guid:34,
-        componentId:'3779371_2RF45eFAPD0OOgj$vCE37m',
+        componentId:'20711982_2RF45eFAPD0OOgj$vCE37m',
         type:'switch',
       }
     ]
   }
 ];
+
 // 添加左侧树
 const initTree = () =>{
   $('#tree').treeview({
     data: tree,
-    collapseIcon:"glyphicon glyphicon-folder-open",
-    expandIcon:'glyphicon glyphicon-folder-close',
+    collapseIcon:"glyphicon glyphicon-minus",
+    expandIcon:'glyphicon glyphicon-plus',
     onNodeSelected: function(event, data) {
       textMark.children=[];
-      ballMark.children=[];
       threeBallTextMark.children=[];
       if(data.type === "home"){
+        textMark.children=[];
+        threeBallTextMark.children=[];
         showballMark(data.level);
         vizbim.resetScene(false,true,true,true,true,true,true);
-        vizbim.hideObjs(vizbim.alloids);
-        vizbim.showObjs(data.componentId);
+        vizbim.reverseTransparentObjs(data.componentId,0.05,true);
+        // vizbim.hideObjs(vizbim.alloids);
+        // vizbim.showObjs(data.componentId);
       }else{
-        addMark(data.componentId,data.text)
+        addMark(data.componentId,data.text);
         if(data.parentId === 0 ){
           vizbim.hideObjs(vizbim.alloids);
           vizbim.showObjs(allComponents.component2);
@@ -257,23 +266,25 @@ const initTree = () =>{
           vizbim.showObjs(allComponents.component4);
         }
       }
-      vizbim.hideObjs(["3779371_1mPxx$mUnDPebB6XlyJxQM","3779371_2tfyzEGf1Dg9mRmsgVgP7n"]);
+      vizbim.hideObjs(["20711982_1mPxx$mUnDPebB6XlyJxQM","20711982_2tfyzEGf1Dg9mRmsgVgP7n"]);
     },
     onNodeUnselected: (event, data)=>{
       textMark.children=[];
-      ballMark.children=[];
       threeBallTextMark.children=[];
       if(data.type === "home") {
         vizbim.resetScene(true,true,true,true,true,true,true);
         vizbim.fly.flyTo(mainView);
       }else {
-        const level = parseInt(data.text.substring(0,1));
-        console.log("level",level);
+          const level = parseInt(data.text.substring(0,1));
+          textMark.children=[];
+          threeBallTextMark.children=[];
+          showballMark(level);
       }
-      if(mark){
-        mark.remove("markid")
+      if(mark&&markFlag){
+        markFlag = !markFlag;
+        mark.remove("markid");
       }
-      vizbim.hideObjs(["3779371_1mPxx$mUnDPebB6XlyJxQM","3779371_2tfyzEGf1Dg9mRmsgVgP7n"]);
+      // vizbim.hideObjs(["3779371_1mPxx$mUnDPebB6XlyJxQM","3779371_2tfyzEGf1Dg9mRmsgVgP7n"]);
     }
   })
   $('#tree').treeview('collapseAll', { silent: true });
@@ -288,20 +299,22 @@ const changHomeBehavior = () =>{
   $('#home'+uuid).bind("click",()=>{
     vizbim.fly.flyTo(mainView)
     vizbim.resetScene(false,true,true,true,true,true,true);
-    if(mark){
+    if(mark&&markFlag){
+      markFlag = !markFlag;
       mark.remove("markid");
     }
     textMark.children=[];
-    ballMark.children=[];
     threeBallTextMark.children=[];
   });
 }
 
 // 添加3D文字
 const addText = (content,componentid) =>{
+
+
   let xMid,text, message;
   let loader = new THREE.FontLoader();
-  loader.load( 'http://pf6zh7nc8.bkt.clouddn.com/helvetiker_regular.typeface.json', function ( font ) {
+  loader.load( 'https://www.boswinner.com.cn/vizbim/fonts/helvetiker_regular.typeface.json', function ( font ) {
 
     let textShape = new THREE.BufferGeometry();
 
@@ -343,8 +356,6 @@ const addText = (content,componentid) =>{
     let position = vizbim.components[componentid].position;
     let newposition = {}
     newposition.x = position.x;
-    // newposition.y = position.y + 7000;
-    // newposition.z = position.z + 7500;
     newposition.y = position.y;
     newposition.z = position.z+7500;
     text.position.x = newposition.x;
@@ -352,6 +363,7 @@ const addText = (content,componentid) =>{
     text.position.z = newposition.z;
     text.rotation.x+=Math.PI/2;
     text.rotation.y+=Math.PI/2;
+    text.material.depthTest = false;
     textMark.add(text);
     updateTextView();
     vizbim.cameraControl.addEventListener('change',function(){
@@ -372,7 +384,6 @@ const updateTextView  = () =>{
 
 // 三维圆形标签
 const addThreeBallMarker = (position) =>{
-
   let ballMarkItem = new THREE.Object3D();
 
   var geometry1 = new THREE.SphereGeometry( 700, 32, 32);
@@ -396,20 +407,28 @@ const addThreeBallMarker = (position) =>{
 
   threeBallTextMark.add(ballMarkItem);
 
-  // console.log("ballMark:",ballMark);
-  //
-  // console.log("addBallMarker--textMark:",textMark.children.length);
-  // console.log("addBallMarker--ballMark:",ballMark.children.length);
-
-
+  // 由于异步的关系，如果创建了8个标签，即两层，则移除前四个
+  if(threeBallTextMark.children && threeBallTextMark.children.length === 8 && textMark.children && textMark.children.length === 8){
+    for (let i =0;i<4;i++){
+      threeBallTextMark.remove(threeBallTextMark.children[0]);
+    }
+    for (let i =0;i<4;i++){
+      textMark.remove(textMark.children[0]);
+    }
+  }
+  // 如果文字标签存在，则移除三维球标签
+  if(markFlag) {
+      threeBallTextMark.children = [];
+      textMark.children = [];
+  }
 }
 
 //  显示圆形和文字标签
 const showballMark = (level) =>{
   textMark.children=[];
-  ballMark.children=[];
   threeBallTextMark.children=[];
-  if(mark){
+  if(mark&&markFlag){
+    markFlag = !markFlag;
     mark.remove("markid");
   }
   if(level === 2){
@@ -453,4 +472,8 @@ const get234Compoennts = (componentArray,level) =>{
     }
   });
   return levelComponent;
+}
+
+const addLoading = () =>{
+  $("body").append("<div id=\"load\" style=\"position: fixed; top: 2%; left: 50%;\">加载中...</div>\n")
 }
