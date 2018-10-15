@@ -7,5 +7,5 @@
 中的代码。
 
 网站访问地址为：
-  https://www.boswinner.com.cn/group/list
+  https://www.boswinner.com.cn
 
