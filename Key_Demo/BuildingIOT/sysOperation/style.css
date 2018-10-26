@@ -1,0 +1,43 @@
+.lyButton{
+    background-color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100px;
+    margin:10px 0;
+    float: right;
+    background-color:red;
+    color: white;
+}
+#container{
+    position: absolute;
+    /*height: 100%;*/
+    width: 300px;
+    overflow-y: hidden;
+    top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+p {
+    padding: 10px;
+}
+
+.demodescriptioncontainerp{
+    line-height: 1.6;
+    font-size: 16px;
+
+}
+
+#descriptionContainer{
+    font-size:16px;
+    margin-bottom: 0;
+    background-color:white;
+    width:280px;
+}
+#accomplishedList{
+    font-size:16px;
+    margin-top:10px;
+    width: 280px;
+}
