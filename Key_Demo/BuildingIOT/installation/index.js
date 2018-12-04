@@ -1,7 +1,7 @@
 // 初始化主对象配置
 const op = {
  viewport:"viewport",
- devcode:"e10e59bf0ee97213ca7104977877bd1a",
+ devcode:"e10e59bf0ee97213ca7104",	//用户devcode
  viewController:false        //不加载左上角视图球
 };
 
