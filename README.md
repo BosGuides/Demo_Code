@@ -22,21 +22,21 @@ BIM与广告 | key_demo/BIM_with_ad
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-动态构件 | 3Dviewer/dynamic_component
-添加标签 | 3Dviewer/add_tag
-构件样式变化 | 3Dviewer/component_style_change
-光照与阴影 | 3Dviewer/light_and_shadow
-高亮 | 3Dviewer/highLight  
-透明 | 3Dviewer/transparent
-聚焦 | 3Dviewer/adaptive
-剖切 | 3Dviewer/cutting
-线框 | 3Dviewer/wireframe
-隐藏 | 3Dviewer/hiding
-构件颜色 | 3Dviewer/componentColor
-隔离 | 3Dviewer/isolate
-相机变换 | 3Dviewer/cameraSwitch
-消息提示框 | 3Dviewer/massageNotation
-修改背景颜色 | 3Dviewer/backgroundColor
+动态构件 | 3d_viewer/dynamic_component
+添加标签 | 3d_viewer/add_tag
+构件样式变化 | 3d_viewer/component_style_change
+光照与阴影 | 3d_viewer/light_and_shadow
+高亮 | 3d_viewer/highLight  
+透明 | 3d_viewer/transparent
+聚焦 | 3d_viewer/adaptive
+剖切 | 3d_viewer/cutting
+线框 | 3d_viewer/wireframe
+隐藏 | 3d_viewer/hiding
+构件颜色 | 3d_viewer/componentColor
+隔离 | 3d_viewer/isolate
+相机变换 | 3d_viewer/cameraSwitch
+消息提示框 | 3d_viewer/massageNotation
+修改背景颜色 | 3d_viewer/backgroundColor
 
 
 
