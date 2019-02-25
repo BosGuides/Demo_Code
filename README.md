@@ -26,7 +26,7 @@ BIM与广告 | key_demo/BIM_with_ad
 添加标签 | 3d_viewer/add_tag
 构件样式变化 | 3d_viewer/component_style_change
 光照与阴影 | 3d_viewer/light_and_shadow
-高亮 | 3d_viewer/highLight  
+高亮 | 3d_viewer/highlight  
 透明 | 3d_viewer/transparent
 聚焦 | 3d_viewer/adaptive
 剖切 | 3d_viewer/cutting
@@ -34,7 +34,7 @@ BIM与广告 | key_demo/BIM_with_ad
 隐藏 | 3d_viewer/hiding
 构件颜色 | 3d_viewer/component_color
 隔离 | 3d_viewer/isolate
-相机变换 | 3d_viewer/cameras_witch
+相机变换 | 3d_viewer/camera_switch
 消息提示框 | 3d_viewer/massage_notation
 修改背景颜色 | 3d_viewer/background_color
 
