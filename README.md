@@ -32,11 +32,11 @@ BIM与广告 | key_demo/BIM_with_ad
 剖切 | 3d_viewer/cutting
 线框 | 3d_viewer/wireframe
 隐藏 | 3d_viewer/hiding
-构件颜色 | 3d_viewer/componentColor
+构件颜色 | 3d_viewer/component_color
 隔离 | 3d_viewer/isolate
-相机变换 | 3d_viewer/cameraSwitch
-消息提示框 | 3d_viewer/massageNotation
-修改背景颜色 | 3d_viewer/backgroundColor
+相机变换 | 3d_viewer/cameras_witch
+消息提示框 | 3d_viewer/massage_notation
+修改背景颜色 | 3d_viewer/background_color
 
 
 
