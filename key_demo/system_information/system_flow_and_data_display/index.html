@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<title>系统流向与数据展示</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="https://www.bos.xyz/vizbim/img/redblock.ico" type="img/x-ico"/>
+    <link rel="stylesheet" href="https://www.bos.xyz/vizbim/fontawesome5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://www.bos.xyz/vizbim/BIMWINNER.viewer.min.css"/>
+    <link rel="stylesheet" href="https://www.bos.xyz/vizbim/layui/css/layui.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body style="overflow-y: hidden; margin: 0">
+<div id="viewport" style="width: 100%; height: 100%; outline: none"></div>
+<div id="container"></div>
+
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/bootstrap-treeview.min.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/spectrum.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/jquery-ui.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/three.min.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/jszip.min.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/layui/layui.js"></script>
+<script type="text/javascript" src='https://www.bos.xyz/vizbim/html2canvas.min.js'></script>
+
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/BIMWINNER.viewer.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript">
+  var op = {
+    viewport: "viewport",
+    devcode: "e10e59bf0ee97213ca7104977877bd1a",
+    baseaddress: 'https://api.bos.xyz/',
+    viewController: false        //不加载左上角视图球
+  };
+  let systemComponents1 = [],
+    systemComponents2 = [],
+    systemComponents3 = [],
+    systemComponents4 = [],
+    systemComponents5 = [],
+    systemComponents6 = [];
+  const arrowArray1 = new THREE.Object3D(),
+    arrowArray21 = new THREE.Object3D(),
+    arrowArray22 = new THREE.Object3D(),
+    arrowArray23 = new THREE.Object3D(),
+    arrowArray24 = new THREE.Object3D(),
+    arrowArray25 = new THREE.Object3D(),
+    arrowArray31 = new THREE.Object3D(),
+    arrowArray32 = new THREE.Object3D(),
+    arrowArray33 = new THREE.Object3D(),
+    arrowArray34 = new THREE.Object3D(),
+    arrowArray35 = new THREE.Object3D(),
+    arrowArray36 = new THREE.Object3D(),
+    arrowArray37 = new THREE.Object3D(),
+    arrowArray41 = new THREE.Object3D(),
+    arrowArray42 = new THREE.Object3D(),
+    arrowArray43 = new THREE.Object3D(),
+    arrowArray44 = new THREE.Object3D(),
+    arrowArray45 = new THREE.Object3D(),
+    arrowArray51 = new THREE.Object3D(),
+    arrowArray52 = new THREE.Object3D(),
+    arrowArray53 = new THREE.Object3D(),
+    arrowArray54 = new THREE.Object3D(),
+    arrowArray55 = new THREE.Object3D(),
+    arrowArray56 = new THREE.Object3D(),
+    arrowArray61 = new THREE.Object3D(),
+    arrowArray62 = new THREE.Object3D(),
+    arrowArray63 = new THREE.Object3D(),
+    arrowArray64 = new THREE.Object3D(),
+    arrowArray65 = new THREE.Object3D(),
+    arrowArray66 = new THREE.Object3D(),
+    arrowArray67 = new THREE.Object3D(),
+    arrowArray68 = new THREE.Object3D(),
+    arrowArray69 = new THREE.Object3D(),
+    textMark = new THREE.Object3D(),
+    textMark1 = new THREE.Object3D(),
+    textMark2 = new THREE.Object3D(),
+    textMark3 = new THREE.Object3D(),
+    textMark4 = new THREE.Object3D(),
+    textMark5 = new THREE.Object3D(),
+    textMark6 = new THREE.Object3D();
+
+  const arrowArray = [
+    arrowArray1, arrowArray21, arrowArray22, arrowArray23,
+    arrowArray24, arrowArray25, arrowArray31, arrowArray32,
+    arrowArray33, arrowArray34, arrowArray35, arrowArray36,
+    arrowArray37, arrowArray41, arrowArray42, arrowArray43,
+    arrowArray44, arrowArray45, arrowArray51, arrowArray52,
+    arrowArray53, arrowArray54, arrowArray55, arrowArray56,
+    arrowArray61, arrowArray62, arrowArray63, arrowArray64,
+    arrowArray65, arrowArray66, arrowArray67, arrowArray68,
+    arrowArray69, textMark1, textMark2, textMark3, textMark4,
+    textMark5, textMark6
+  ]
+  const vizbim = new BIMWINNER.Viewer(op);
+  const filekey = 'BuildingIOT_sysSupervise';
+  init(filekey);
+</script>
+</body>
+</html>
