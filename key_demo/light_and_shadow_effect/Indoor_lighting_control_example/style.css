@@ -1,0 +1,58 @@
+#container{
+    position: absolute;
+    left: 3%;
+    top: 5%;
+    background: white;
+    width: 19.8%;
+    height: 27.8%;
+    min-width: 280px;
+    min-height: 240px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.itemContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 300px;
+}
+
+.oneopen{
+    width: 100px;
+}
+
+.iconContainer{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    /*width: 26.3%;*/
+    width: 100px;
+    margin-top: 1px;
+}
+
+.lightOnIcon{
+    color: green;
+}
+
+.icon{
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    background-position: bottom center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat ;
+}
+
+.lighton{
+    background-image: url(icon/withlight.png);
+}
+
+.lightoff{
+    background-image: url(icon/withoutlight.png);
+}
