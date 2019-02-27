@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>加载天空盒</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="https://www.bos.xyz/vizbim/img/redblock.ico" type="img/x-ico"/>
+    <link rel="stylesheet" href="https://www.bos.xyz/vizbim/fontawesome5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://www.bos.xyz/vizbim/BIMWINNER.viewer.min.css"/>
+<body style="overflow: hidden; outline: none; margin: 0">
+<div id="viewport" style="width: 800px; height: 600px;"></div>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/bootstrap-treeview.min.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/spectrum.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/jquery-ui.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/three.min.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/jszip.min.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/layui/layui.js"></script>
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/Tween.js"></script>
+<script type="text/javascript" src='https://www.bos.xyz/vizbim/html2canvas.min.js'> </script>
+
+<script type="text/javascript" src="https://www.bos.xyz/vizbim/BIMWINNER.viewer.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript">
+  //  配置三维主对象参数
+  const op = {
+    viewport: "viewport",
+    devcode: "e10e59bf0ee97213ca7104977877bd1a",
+    baseaddress: 'https://api.bos.xyz/',
+    viewController: false        //不加载左上角视图球
+  };
+  // 定义模型的key
+  const filekey = "47043446";
+  // 初始化主对象
+  const vizbim = new BIMWINNER.Viewer(op);
+  // 运行主函数
+  init(filekey);
+</script>
+</body>
+
+</html>
