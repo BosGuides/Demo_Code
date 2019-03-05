@@ -1,7 +1,7 @@
 # [小红砖](www.bos.xyz) 示例库-高亮 代码导航
 
 
-构件查询示例，是对当前模型的数据进行按需查找。可以筛选楼层，在指定楼层进行查找；可对某类构件进行查找；也可针对某个构件名称进行模糊查询。用户可以将完整代码直接下载下来后，将模型id和用户个人账户devcode替换上去，即可展示自有模型。
+高亮示例，可以将任意三维构件进行高亮展示，还可以将视点飞跃至适合观察高亮构件的位置，方便在住房类、办公区、厂房类等构件众多的模型中清晰便捷地找到所需构件并查看。
 
 ### 在当前代码库中，提供了可以供开发者学习和使用的示例代码。
 
@@ -15,8 +15,8 @@
 ------------ | ------------- 
 设置高亮示例 | set_highlight
 高亮并飞跃视角示例 | highlight_and_leap_perspective
-住房类示例—高亮 | house_example_highlight
-办公区示例—高亮 | office_area_highlight
-厂房类示例—高亮 | factory_class _highlight
+住房类示例-高亮 | house_example_highlight
+办公区示例-高亮 | office_area_highlight
+厂房类示例-高亮 | factory_class _highlight
 
 ---
