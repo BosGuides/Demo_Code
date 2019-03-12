@@ -15,7 +15,7 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[光影效果变化示例](https://xhz-beta.bos.xyz/examples/solar_shadow_transformation_example.html)| solar_shadow_transformation_example 
-[室内灯光管控示例](https://xhz-beta.bos.xyz/examples/indoor_lighting_control_example.html) | indoor_lighting_control_example
+[光影效果变化示例](https://www.bos.xyz/examples/solar_shadow_transformation_example.html)| solar_shadow_transformation_example 
+[室内灯光管控示例](https://www.bos.xyz/examples/indoor_lighting_control_example.html) | indoor_lighting_control_example
 
 ---
