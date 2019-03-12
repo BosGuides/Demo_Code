@@ -22,11 +22,28 @@ BIM与广告 | BIM_with_ad
 
 ---
 
-### 相关数据接口如下列表所示
+### 相关数据接口如下所示
 
-接口名称 
-------------
-获取模型外轮廓 
-查询外轮廓状态
-获取模型
-获取模型
+[获取模型外轮廓](https://www.bos.xyz/guides/swapi/getOuter)
+
+[查询外轮廓状态](https://www.bos.xyz/guides/swapi/queryOutlineState)
+
+[获取模型外轮廓构件集](https://www.bos.xyz/guides/swapi/getOuterComs)
+
+[获取模型系统树列表](https://www.bos.xyz/guides/swapi/getSystemTree)
+
+[获取模型管道连接信息](https://www.bos.xyz/guides/swapi/getPipeConnectionInfo)
+
+[获取指定构件所属系统](https://www.bos.xyz/guides/swapi/getSystemKeyByComponentId)
+
+[获取指定系统下所有构件列表](https://www.bos.xyz/guides/swapi/getComponentBySystemKey)
+
+[获取构件相关联的指定类型构件集](https://www.bos.xyz/guides/swapi/getAssociatedComponentByComponentId)
+
+[获取模型空间树列表](https://www.bos.xyz/guides/swapi/getSpaceTree)
+
+[获取模型构件的下级构件列表](https://www.bos.xyz/guides/swapi/getLowerComponents)
+
+[获取构件下所有子构件类型](https://www.bos.xyz/guides/swapi/getSubcomponentTypes)
+
+[查询指定条件构件列表](https://www.bos.xyz/guides/swapi/queryComponentBySpecifiedConditions2)
