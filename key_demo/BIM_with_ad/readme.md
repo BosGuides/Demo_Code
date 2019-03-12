@@ -13,8 +13,8 @@ BIM与广告，是将BIM与广告结合起来，改变了以往使用纸质宣�
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-产品信息介绍 | product_information_introduction
-产品安装指南 | product_installation_guide
+[产品信息介绍](https://www.bos.xyz/examples/product_information_introduction.html) | product_information_introduction
+[产品安装指南](https://www.bos.xyz/examples/product_installation_guide.html) | product_installation_guide
 
 ---
 
