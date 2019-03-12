@@ -17,8 +17,8 @@
 [模型外轮廓对比](https://www.bos.xyz/examples/comparison.html) | model_outline_comparison
 [模型外轮廓分离](https://www.bos.xyz/examples/separation.html) | model_outline_separation
 [多级外轮廓提取与展示](https://www.bos.xyz/examples/model_extraction_display.html) | multi-level_outline_extraction_and_display
-[多级外轮廓精细度对比](https://xhz-beta.bos.xyz/examples/fineness_comparison.html) | multi-level_outline_fineness_comparison
-[多级外轮廓与内部构件分离](https://xhz-beta.bos.xyz/examples/separated_from_internal_components.html) | multi-level_outline_separated_from_internal_components
+[多级外轮廓精细度对比](https://www.bos.xyz/examples/fineness_comparison.html) | multi-level_outline_fineness_comparison
+[多级外轮廓与内部构件分离](https://www.bos.xyz/examples/separated_from_internal_components.html) | multi-level_outline_separated_from_internal_components
 
 ---
 
