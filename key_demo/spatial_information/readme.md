@@ -17,3 +17,12 @@ BIM模型空间树的应用场景众多，可应用于建筑分层导览展示�
 空间添加标签 | space_tag
 
 ---
+
+### 相关数据接口如下所示
+
+[获取模型外轮廓](https://www.bos.xyz/guides/swapi/getOuter)
+
+[查询外轮廓状态](https://www.bos.xyz/guides/swapi/queryOutlineState)
+
+[获取模型外轮廓构件集](https://www.bos.xyz/guides/swapi/getOuterComs)
+
