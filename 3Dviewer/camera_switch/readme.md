@@ -13,7 +13,7 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-相机变换示例 | camera_switch
-漫游示例 | roaming
+[相机变换示例](https://www.bos.xyz/examples/camera_switch.html) | camera_switch
+[漫游示例](https://www.bos.xyz/examples/roaming.html) | roaming
 
 ---
