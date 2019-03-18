@@ -13,8 +13,8 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-添加面板标签示例 | add_panel_label
-添加三维球状标签示例 | add_3d_ spherical_label
-添加三维字体示例 | add_3d_font
+[添加面板标签示例](https://www.bos.xyz/examples/add_panel_label.html) | add_panel_label
+[添加三维球状标签示例](https://www.bos.xyz/examples/add_3d_spherical_label.html) | add_3d_ spherical_label
+[添加三维字体示例](https://www.bos.xyz/examples/add_3d_spherical_label.html) | add_3d_font
 
 ---
