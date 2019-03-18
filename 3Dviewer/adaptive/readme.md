@@ -13,12 +13,12 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[构件聚焦示例](https://www.bos.xyz/examples/detail/component_adaptive.html) | component_adaptive
-[模型聚焦示例](https://www.bos.xyz/examples/detail/model_adaptive.html) | model_adaptive
-[分类聚焦示例](https://www.bos.xyz/examples/detail/classified_adaptive.html) | classified_adaptive
-[聚焦并高亮示例](https://www.bos.xyz/examples/detail/adaptive_and_highlight.html) | adaptive_and_highlight
-[住房类示例-聚焦](https://www.bos.xyz/examples/detail/house_example_adaptive.html) | house_example_adaptive
-[办公区示例-聚焦](https://www.bos.xyz/examples/detail/office_area_adaptive.html) | office_area_adaptive
-[厂房类示例-聚焦](https://www.bos.xyz/examples/detail/factory_class_adaptive.html) | factory_class _adaptive
+[构件聚焦示例](https://www.bos.xyz/examples/component_adaptive.html) | component_adaptive
+[模型聚焦示例](https://www.bos.xyz/examples/model_adaptive.html) | model_adaptive
+[分类聚焦示例](https://www.bos.xyz/examples/classified_adaptive.html) | classified_adaptive
+[聚焦并高亮示例](https://www.bos.xyz/examples/adaptive_and_highlight.html) | adaptive_and_highlight
+[住房类示例-聚焦](https://www.bos.xyz/examples/house_example_adaptive.html) | house_example_adaptive
+[办公区示例-聚焦](https://www.bos.xyz/examples/office_area_adaptive.html) | office_area_adaptive
+[厂房类示例-聚焦](https://www.bos.xyz/examples/factory_class_adaptive.html) | factory_class _adaptive
 
 ---
