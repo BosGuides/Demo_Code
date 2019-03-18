@@ -13,12 +13,12 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-模型外轮廓 | key_demo/model_outline 
-空间信息 | key_demo/spatial_information
-系统信息 | key_demo/system_information
-构件查询 | key_demo/component_query
-光影效果 | key_demo/light_and_shadow_effect
-BIM与广告 | key_demo/BIM_with_ad
+[模型外轮廓](https://www.bos.xyz/examples/#model_outline) | key_demo/model_outline 
+[空间信息](https://www.bos.xyz/examples/#spatial_information) | key_demo/spatial_information
+[系统信息](https://www.bos.xyz/examples/#system_information) | key_demo/system_information
+[构件查询](https://www.bos.xyz/examples/#component_query) | key_demo/component_query
+[光影效果](https://www.bos.xyz/examples/#light_and_shadow_effect) | key_demo/light_and_shadow_effect
+[BIM与广告](https://www.bos.xyz/examples/#BIM_with_ad) | key_demo/BIM_with_ad
 
 ---
 
@@ -26,21 +26,21 @@ BIM与广告 | key_demo/BIM_with_ad
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-动态构件 | 3d_viewer/dynamic_component
-添加标签 | 3d_viewer/add_tag
-构件样式变化 | 3d_viewer/component_style_change
-光照与阴影 | 3d_viewer/light_and_shadow
-高亮 | 3d_viewer/highlight  
-透明 | 3d_viewer/transparent
-聚焦 | 3d_viewer/adaptive
-剖切 | 3d_viewer/cutting
-线框 | 3d_viewer/wireframe
-隐藏 | 3d_viewer/hiding
-构件颜色 | 3d_viewer/component_color
-隔离 | 3d_viewer/isolate
-相机变换 | 3d_viewer/camera_switch
-消息提示框 | 3d_viewer/massage_notation
-修改背景颜色 | 3d_viewer/background_color
+[动态构件](https://www.bos.xyz/examples/#dynamic_component) | 3d_viewer/dynamic_component
+[添加标签](https://www.bos.xyz/examples/#add_tag) | 3d_viewer/add_tag
+[构件样式变化](https://www.bos.xyz/examples/#component_style_change) | 3d_viewer/component_style_change
+[光照与阴影](https://www.bos.xyz/examples/#light_and_shadow) | 3d_viewer/light_and_shadow
+[高亮](https://www.bos.xyz/examples/#highlight) | 3d_viewer/highlight  
+[透明](https://www.bos.xyz/examples/#transparent) | 3d_viewer/transparent
+[聚焦](https://www.bos.xyz/examples/#adaptive) | 3d_viewer/adaptive
+[剖切](https://www.bos.xyz/examples/#cutting) | 3d_viewer/cutting
+[线框](https://www.bos.xyz/examples/#wireframe) | 3d_viewer/wireframe
+[隐藏](https://www.bos.xyz/examples/#hiding) | 3d_viewer/hiding
+[构件颜色](https://www.bos.xyz/examples/#component_color) | 3d_viewer/component_color
+[隔离](https://www.bos.xyz/examples/#isolate) | 3d_viewer/isolate
+[相机变换](https://www.bos.xyz/examples/#camera_switch) | 3d_viewer/camera_switch
+[消息提示框](https://www.bos.xyz/examples/#massage_notation) | 3d_viewer/massage_notation
+[修改背景颜色](https://www.bos.xyz/examples/#background_color) | 3d_viewer/background_color
 
 
 
