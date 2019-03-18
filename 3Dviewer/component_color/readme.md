@@ -13,10 +13,10 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-设置构件颜色示例 | set_component_color
-分类构件颜色示例 | classification_component_set_color
-住房类示例-构件颜色 | house_example_set_color
-办公区示例-构件颜色 | office_area_set_color
-厂房类示例-构件颜色 | factory_class_set_color
+[设置构件颜色示例](https://www.bos.xyz/examples/set_component_color.html) | set_component_color
+[分类构件颜色示例](https://www.bos.xyz/examples/classification_component_set_color.html) | classification_component_set_color
+[住房类示例-构件颜色](https://www.bos.xyz/examples/house_example_set_color.html) | house_example_set_color
+[办公区示例-构件颜色](https://www.bos.xyz/examples/office_area_set_color.html) | office_area_set_color
+[厂房类示例-构件颜色](https://www.bos.xyz/examples/factory_class_set_color.html) | factory_class_set_color
 
 ---
