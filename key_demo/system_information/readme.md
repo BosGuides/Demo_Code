@@ -12,21 +12,21 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[系统信息提取与展示](https://www.bos.xyz/examples/system_extraction_display.html) | system_information_extraction_and_display 
-[指定构件所属系统展示](https://www.bos.xyz/examples/specify_component_display.html) | specify_component_system_display
-[构件关联类型系统展示](https://www.bos.xyz/examples/association_type_display.html) | association_type_system_display
-[系统流向与数据展示](https://www.bos.xyz/examples/system_flow_data_display.html) | system_flow_and_data_display
-[管道系统维修示例](https://www.bos.xyz/examples/piping_system_maintenance.html) | piping_system_maintenance_example
+[系统信息提取与展示](https://www.bos.xyz/examples/system_extraction_display.html?source=git) | system_information_extraction_and_display 
+[指定构件所属系统展示](https://www.bos.xyz/examples/specify_component_display.html?source=git) | specify_component_system_display
+[构件关联类型系统展示](https://www.bos.xyz/examples/association_type_display.html?source=git) | association_type_system_display
+[系统流向与数据展示](https://www.bos.xyz/examples/system_flow_data_display.html?source=git) | system_flow_and_data_display
+[管道系统维修示例](https://www.bos.xyz/examples/piping_system_maintenance.html?source=git) | piping_system_maintenance_example
 
 ---
 ### 相关接口
 
-[获取模型系统树列表](https://www.bos.xyz/guides/swapi/getSystemTree)
+[获取模型系统树列表](https://www.bos.xyz/guides/swapi/getSystemTree?source=git)
 
-[获取模型管道连接信息](https://www.bos.xyz/guides/swapi/getPipeConnectionInfo)
+[获取模型管道连接信息](https://www.bos.xyz/guides/swapi/getPipeConnectionInfo?source=git)
 
-[获取指定构件所属系统](https://www.bos.xyz/guides/swapi/getSystemKeyByComponentId)
+[获取指定构件所属系统](https://www.bos.xyz/guides/swapi/getSystemKeyByComponentId?source=git)
 
-[获取指定系统下所有构件列表](https://www.bos.xyz/guides/swapi/getComponentBySystemKey)
+[获取指定系统下所有构件列表](https://www.bos.xyz/guides/swapi/getComponentBySystemKey?source=git)
 
-[获取构件相关联的指定类型构件集](https://www.bos.xyz/guides/swapi/getAssociatedComponentByComponentId)
+[获取构件相关联的指定类型构件集](https://www.bos.xyz/guides/swapi/getAssociatedComponentByComponentId?source=git)
