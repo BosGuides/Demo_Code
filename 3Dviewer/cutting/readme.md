@@ -13,11 +13,11 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[模型剖切示例](https://www.bos.xyz/examples/model_cutting.html) | model_cutting
-[模型分类剖切示例](https://www.bos.xyz/examples/model_classification_cutting.html) | model_classification_cutting
-[单一构件剖切示例](https://www.bos.xyz/examples/component_cutting.html) | component_cutting
-[住房类示例-剖切](https://www.bos.xyz/examples/house_example_cutting.html) | house_example_cutting
-[办公区示例-剖切](https://www.bos.xyz/examples/office_area_cutting.html) | office_area_cutting
-[厂房类示例-剖切](https://www.bos.xyz/examples/factory_class_cutting.html) | factory_class _cutting
+[模型剖切示例](https://www.bos.xyz/examples/model_cutting.html?source=git) | model_cutting
+[模型分类剖切示例](https://www.bos.xyz/examples/model_classification_cutting.html?source=git) | model_classification_cutting
+[单一构件剖切示例](https://www.bos.xyz/examples/component_cutting.html?source=git) | component_cutting
+[住房类示例-剖切](https://www.bos.xyz/examples/house_example_cutting.html?source=git) | house_example_cutting
+[办公区示例-剖切](https://www.bos.xyz/examples/office_area_cutting.html?source=git) | office_area_cutting
+[厂房类示例-剖切](https://www.bos.xyz/examples/factory_class_cutting.html?source=git) | factory_class _cutting
 
 ---
