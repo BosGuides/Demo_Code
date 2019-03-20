@@ -13,6 +13,6 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[修改背景颜色示例](https://www.bos.xyz/examples/change_background_color.html) | change_background_color
+[修改背景颜色示例](https://www.bos.xyz/examples/change_background_color.html?source=git) | change_background_color
 
 ---
