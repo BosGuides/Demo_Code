@@ -13,37 +13,37 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-模型外轮廓 | model_outline 
-空间信息 | spatial_information
-系统信息 | system_information
-构件查询 | component_query
-光影效果 | light_and_shadow_effect
-BIM与广告 | BIM_with_ad
+[模型外轮廓](https://www.bos.xyz/examples/?source=git#model_outline) | model_outline 
+[空间信息](https://www.bos.xyz/examples/?source=git#spatial_information) | spatial_information
+[系统信息](https://www.bos.xyz/examples/?source=git#system_information) | system_information
+[构件查询](https://www.bos.xyz/examples/?source=git#component_query) | component_query
+[光影效果](https://www.bos.xyz/examples/?source=git#light_and_shadow_effect) | light_and_shadow_effect
+[BIM与广告](https://www.bos.xyz/examples/?source=git#BIM_with_ad) | BIM_with_ad
 
 ---
 
 ### 相关数据接口如下所示
 
-[获取模型外轮廓](https://www.bos.xyz/guides/swapi/getOuter)
+[获取模型外轮廓](https://www.bos.xyz/guides/swapi/getOuter?source=git)
 
-[查询外轮廓状态](https://www.bos.xyz/guides/swapi/queryOutlineState)
+[查询外轮廓状态](https://www.bos.xyz/guides/swapi/queryOutlineState?source=git)
 
-[获取模型外轮廓构件集](https://www.bos.xyz/guides/swapi/getOuterComs)
+[获取模型外轮廓构件集](https://www.bos.xyz/guides/swapi/getOuterComs?source=git)
 
-[获取模型系统树列表](https://www.bos.xyz/guides/swapi/getSystemTree)
+[获取模型系统树列表](https://www.bos.xyz/guides/swapi/getSystemTree?source=git)
 
-[获取模型管道连接信息](https://www.bos.xyz/guides/swapi/getPipeConnectionInfo)
+[获取模型管道连接信息](https://www.bos.xyz/guides/swapi/getPipeConnectionInfo?source=git)
 
-[获取指定构件所属系统](https://www.bos.xyz/guides/swapi/getSystemKeyByComponentId)
+[获取指定构件所属系统](https://www.bos.xyz/guides/swapi/getSystemKeyByComponentId?source=git)
 
-[获取指定系统下所有构件列表](https://www.bos.xyz/guides/swapi/getComponentBySystemKey)
+[获取指定系统下所有构件列表](https://www.bos.xyz/guides/swapi/getComponentBySystemKey?source=git)
 
-[获取构件相关联的指定类型构件集](https://www.bos.xyz/guides/swapi/getAssociatedComponentByComponentId)
+[获取构件相关联的指定类型构件集](https://www.bos.xyz/guides/swapi/getAssociatedComponentByComponentId?source=git)
 
-[获取模型空间树列表](https://www.bos.xyz/guides/swapi/getSpaceTree)
+[获取模型空间树列表](https://www.bos.xyz/guides/swapi/getSpaceTree?source=git)
 
-[获取模型构件的下级构件列表](https://www.bos.xyz/guides/swapi/getLowerComponents)
+[获取模型构件的下级构件列表](https://www.bos.xyz/guides/swapi/getLowerComponents?source=git)
 
-[获取构件下所有子构件类型](https://www.bos.xyz/guides/swapi/getSubcomponentTypes)
+[获取构件下所有子构件类型](https://www.bos.xyz/guides/swapi/getSubcomponentTypes?source=git)
 
-[查询指定条件构件列表](https://www.bos.xyz/guides/swapi/queryComponentBySpecifiedConditions2)
+[查询指定条件构件列表](https://www.bos.xyz/guides/swapi/queryComponentBySpecifiedConditions2?source=git)
