@@ -13,6 +13,6 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[构件查询示例](https://xhz-beta.bos.xyz/examples/component_query_example.html) | component_query_example
+[构件查询示例](https://xhz-beta.bos.xyz/examples/component_query_example.html?source=git) | component_query_example
 
 ---
