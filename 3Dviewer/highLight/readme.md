@@ -13,10 +13,10 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[设置高亮示例](https://www.bos.xyz/examples/set_highlight.html) | set_highlight
-[高亮并飞跃视角示例](https://www.bos.xyz/examples/highlight_leap_perspective.html) | highlight_and_leap_perspective
-[住房类示例-高亮](https://www.bos.xyz/examples/house_example_highlight.html) | house_example_highlight
-[办公区示例-高亮](https://www.bos.xyz/examples/office_area_highlight.html) | office_area_highlight
-[厂房类示例-高亮](https://www.bos.xyz/examples/factory_class_highlight.html) | factory_class _highlight
+[设置高亮示例](https://www.bos.xyz/examples/set_highlight.html?source=git) | set_highlight
+[高亮并飞跃视角示例](https://www.bos.xyz/examples/highlight_leap_perspective.html?source=git) | highlight_and_leap_perspective
+[住房类示例-高亮](https://www.bos.xyz/examples/house_example_highlight.html?source=git) | house_example_highlight
+[办公区示例-高亮](https://www.bos.xyz/examples/office_area_highlight.html?source=git) | office_area_highlight
+[厂房类示例-高亮](https://www.bos.xyz/examples/factory_class_highlight.html?source=git) | factory_class_highlight
 
 ---
