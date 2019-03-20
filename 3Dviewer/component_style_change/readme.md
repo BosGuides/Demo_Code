@@ -14,6 +14,6 @@
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
 [添加贴图示例](https://www.bos.xyz/examples/add_texture.html?source=git) | add_texture
-[更改构件材质示例](https://www.bos.xyz/examples/change_component_material.html?source=git | change_component_material
+[更改构件材质示例](https://www.bos.xyz/examples/change_component_material.html?source=git) | change_component_material
 
 ---
