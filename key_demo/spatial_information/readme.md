@@ -13,16 +13,16 @@ BIM模型空间树的应用场景众多，可应用于建筑分层导览展示�
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-空间树展示 | space_tree_display
-空间添加标签 | space_tag
+[空间树展示](https://www.bos.xyz/examples/space_tree_display.html?source=git) | space_tree_display
+[空间添加标签](https://www.bos.xyz/examples/space_tag.html?source=git) | space_tag
 
 ---
 
 ### 相关数据接口如下所示
 
-[获取模型外轮廓](https://www.bos.xyz/guides/swapi/getOuter)
+[获取模型外轮廓](https://www.bos.xyz/guides/swapi/getOuter?source=git)
 
-[查询外轮廓状态](https://www.bos.xyz/guides/swapi/queryOutlineState)
+[查询外轮廓状态](https://www.bos.xyz/guides/swapi/queryOutlineState?source=git)
 
-[获取模型外轮廓构件集](https://www.bos.xyz/guides/swapi/getOuterComs)
+[获取模型外轮廓构件集](https://www.bos.xyz/guides/swapi/getOuterComs?source=git)
 
