@@ -13,10 +13,10 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[构件隐藏示例](https://www.bos.xyz/examples/component_hiding.html) | component_hiding
-[分类隐藏示例](https://www.bos.xyz/examples/category_hiding.html) | category_hiding
-[住房类示例-隐藏](https://www.bos.xyz/examples/house_example_hiding.html) | house_example_hiding
-[办公区示例-隐藏](https://www.bos.xyz/examples/office_area_hiding.html) | office_area_hiding
-[厂房类示例-隐藏](https://www.bos.xyz/examples/factory_class_hiding.html) | factory_class_hiding
+[构件隐藏示例](https://www.bos.xyz/examples/component_hiding.html?source=git) | component_hiding
+[分类隐藏示例](https://www.bos.xyz/examples/category_hiding.html?source=git) | category_hiding
+[住房类示例-隐藏](https://www.bos.xyz/examples/house_example_hiding.html?source=git) | house_example_hiding
+[办公区示例-隐藏](https://www.bos.xyz/examples/office_area_hiding.html?source=git) | office_area_hiding
+[厂房类示例-隐藏](https://www.bos.xyz/examples/factory_class_hiding.html?source=git) | factory_class_hiding
 
 ---
