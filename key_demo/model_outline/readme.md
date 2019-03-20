@@ -13,21 +13,21 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[模型外轮廓展示](https://www.bos.xyz/examples/display.html) | model_outline_display 
-[模型外轮廓对比](https://www.bos.xyz/examples/comparison.html) | model_outline_comparison
-[模型外轮廓分离](https://www.bos.xyz/examples/separation.html) | model_outline_separation
-[多级外轮廓提取与展示](https://www.bos.xyz/examples/model_extraction_display.html) | multi-level_outline_extraction_and_display
-[多级外轮廓精细度对比](https://www.bos.xyz/examples/fineness_comparison.html) | multi-level_outline_fineness_comparison
-[多级外轮廓与内部构件分离](https://www.bos.xyz/examples/separated_from_internal_components.html) | multi-level_outline_separated_from_internal_components
+[模型外轮廓展示](https://www.bos.xyz/examples/display.html?source=git) | model_outline_display 
+[模型外轮廓对比](https://www.bos.xyz/examples/comparison.html?source=git) | model_outline_comparison
+[模型外轮廓分离](https://www.bos.xyz/examples/separation.html?source=git) | model_outline_separation
+[多级外轮廓提取与展示](https://www.bos.xyz/examples/model_extraction_display.html?source=git) | multi-level_outline_extraction_and_display
+[多级外轮廓精细度对比](https://www.bos.xyz/examples/fineness_comparison.html?source=git) | multi-level_outline_fineness_comparison
+[多级外轮廓与内部构件分离](https://www.bos.xyz/examples/separated_from_internal_components.html?source=git) | multi-level_outline_separated_from_internal_components
 
 ---
 
 
 ### 相关数据接口如下所示
 
-[获取模型外轮廓](https://www.bos.xyz/guides/swapi/getOuter)
+[获取模型外轮廓](https://www.bos.xyz/guides/swapi/getOuter?source=git)
 
-[查询外轮廓状态](https://www.bos.xyz/guides/swapi/queryOutlineState)
+[查询外轮廓状态](https://www.bos.xyz/guides/swapi/queryOutlineState?source=git)
 
-[获取模型外轮廓构件集](https://www.bos.xyz/guides/swapi/getOuterComs)
+[获取模型外轮廓构件集](https://www.bos.xyz/guides/swapi/getOuterComs?source=git)
 
