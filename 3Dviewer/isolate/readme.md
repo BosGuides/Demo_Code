@@ -13,10 +13,10 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[隔离构件示例](https://www.bos.xyz/examples/component_isolate.html) | component_isolate
-[隔离构件类示例](https://www.bos.xyz/examples/isolate_components.html) | isolate_components
-[住房类示例-隔离](https://www.bos.xyz/examples/house_example_isolate.html) | house_example_isolate
-[办公区示例-隔离](https://www.bos.xyz/examples/office_area_isolate.html) | office_area_isolate
-[厂房类示例-隔离](https://www.bos.xyz/examples/factory_class_isolate.html) | factory_class-isolate
+[隔离构件示例](https://www.bos.xyz/examples/component_isolate.html?source=git) | component_isolate
+[隔离构件类示例](https://www.bos.xyz/examples/isolate_components.html?source=git) | isolate_components
+[住房类示例-隔离](https://www.bos.xyz/examples/house_example_isolate.html?source=git) | house_example_isolate
+[办公区示例-隔离](https://www.bos.xyz/examples/office_area_isolate.html?source=git) | office_area_isolate
+[厂房类示例-隔离](https://www.bos.xyz/examples/factory_class_isolate.html?source=git) | factory_class_isolate
 
 ---
