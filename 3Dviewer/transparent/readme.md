@@ -13,11 +13,11 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[构件透明示例](https://www.bos.xyz/examples/component_transparent.html) | component_transparent
-[反选透明示例](https://www.bos.xyz/examples/counter_selection_transparent.html) | anti-selection_transparent
-[分类反选透明示例](https://www.bos.xyz/examples/classified_counter_selection_transparent.html) | classified_anti-selection_transparent
-[厂房类示例-透明](https://www.bos.xyz/examples/factory_class_transparent.html) | factory_class_transparent
-[办公区示例-透明](https://www.bos.xyz/examples/office_area_transparent.html) | office_area_transparent
-[住房类示例-透明](https://www.bos.xyz/examples/house_example_transparent.html) | house_example_transparent
+[构件透明示例](https://www.bos.xyz/examples/component_transparent.html?source=git) | component_transparent
+[反选透明示例](https://www.bos.xyz/examples/counter_selection_transparent.html?source=git) | anti-selection_transparent
+[分类反选透明示例](https://www.bos.xyz/examples/classified_counter_selection_transparent.html?source=git) | classified_anti_selection_transparent
+[厂房类示例-透明](https://www.bos.xyz/examples/factory_class_transparent.html?source=git) | factory_class_transparent
+[办公区示例-透明](https://www.bos.xyz/examples/office_area_transparent.html?source=git) | office_area_transparent
+[住房类示例-透明](https://www.bos.xyz/examples/house_example_transparent.html?source=git) | house_example_transparent
 
 ---
