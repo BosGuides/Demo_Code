@@ -13,9 +13,9 @@
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[加载天空盒示例](https://www.bos.xyz/examples/load_skybox.html) | load_skybox
-[模拟室内灯光示例](https://www.bos.xyz/examples/simulated_indoor_lighting.html) | simulated_indoor_lighting
-[模拟太阳光示例](https://www.bos.xyz/examples/simulated_sunlight.html) | simulated_sunlight
-[阴影示例](https://www.bos.xyz/examples/shadow.html) | shadow
+[加载天空盒示例](https://www.bos.xyz/examples/load_skybox.html?source=git) | load_skybox
+[模拟室内灯光示例](https://www.bos.xyz/examples/simulated_indoor_lighting.html?source=git) | simulated_indoor_lighting
+[模拟太阳光示例](https://www.bos.xyz/examples/simulated_sunlight.html?source=git) | simulated_sunlight
+[阴影示例](https://www.bos.xyz/examples/shadow.html?source=git) | shadow
 
 ---
