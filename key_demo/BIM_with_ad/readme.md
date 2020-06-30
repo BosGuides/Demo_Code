@@ -5,7 +5,7 @@ BIM与广告，是将BIM与广告结合起来，改变了以往使用纸质宣�
 
 ### 在当前代码库中，提供了可以供开发者学习和使用的示例代码。
 
-#### 对应可视化参考，可前往[小红砖新版示例库](https://www.bos.xyz/demos/)
+#### 对应可视化参考，可前往[小红砖示例库](https://www.bos.xyz/examples/)
 
 ---
 
@@ -13,8 +13,8 @@ BIM与广告，是将BIM与广告结合起来，改变了以往使用纸质宣�
 
 示例库名称 | 文件夹名称 
 ------------ | ------------- 
-[产品信息介绍](https://www.bos.xyz/demos/product_information_introduction.html?source=git) | product_information_introduction
-[产品安装指南](https://www.bos.xyz/demos/product_installation_guide.html?source=git) | product_installation_guide
+[产品信息介绍](https://www.bos.xyz/examples/product_information_introduction.html?source=git) | product_information_introduction
+[产品安装指南](https://www.bos.xyz/examples/product_installation_guide.html?source=git) | product_installation_guide
 
 ---
 
